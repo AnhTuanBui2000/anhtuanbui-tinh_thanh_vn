@@ -1,0 +1,18 @@
+    <select  #Tinh  (change)="onChangeProvince(Tinh.value)">
+        <option [ngValue]="">Chọn tỉnh thành</option>
+    <option  *ngFor="let province of provinces">{{province.name}}</option>
+    </select>
+    <select #Huyen (change)="onChangeDistricts(Huyen.value)">
+        <option [ngValue]="">Chọn quận / huyện</option>
+        <option *ngFor="let district of districts"  >{{district.name}}</option>
+    </select>
+    <select #Xa (change)="onChangeWards(Xa.value)">
+        <option>Chọn phường / xã</option>
+        <option *ngFor="let ward of wards">{{ward.name}}</option>
+    </select>
+    <button (click)="submit()">Submit</button> 
+    <div>{{address}}</div>
+    
+    
+    
+
